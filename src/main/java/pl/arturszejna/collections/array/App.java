@@ -1,15 +1,14 @@
 package pl.arturszejna.collections.array;
 
+import java.util.Arrays;
+
 public class App {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 5, 1, 2, 8, 11, 11, 8};
+        Integer[] array = {1, 2, 3, 4, 5, 5, 1, 2, 8, 11, 20, 11};
         Array.isDuplicateMessage(array);
 
         array = Array.removeAllDuplicates(array);
 
-        for ( Integer x : array ) {
-            System.out.print(x + " ");
-        }
-
+        System.out.println(Arrays.toString(array));
     }
 }
