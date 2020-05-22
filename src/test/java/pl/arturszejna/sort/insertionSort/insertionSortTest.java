@@ -13,4 +13,12 @@ public class insertionSortTest {
         Assert.assertArrayEquals(expected, actuals);
     }
 
+    @Test
+    public void sortTestEasy() {
+        int[] actuals = {5, 3, 1, 2, 4, 5, 3, 1, 2, 4};
+        int[] expected = {1, 1, 2, 2, 3, 3, 4, 4, 5, 5};
+        InsertionSort.sort(actuals);
+        Assert.assertArrayEquals(expected, actuals);
+    }
+
 }
