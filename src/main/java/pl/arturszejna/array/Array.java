@@ -33,6 +33,19 @@ class Array {
         }
     }
 
+    int countNegativeArrayElements() {
+        if (values != null) {
+            int count = 0;
+            for ( int i : values ) {
+                if (i < 0)
+                    count++;
+            }
+            return count;
+        } else {
+            return 0;
+        }
+    }
+
     int sumPositiveArrayElements() {
         if (values != null) {
             int sum = 0;
@@ -41,6 +54,19 @@ class Array {
                     sum += i;
             }
             return sum;
+        } else {
+            return 0;
+        }
+    }
+
+    int countPositiveArrayElements() {
+        if (values != null) {
+            int count = 0;
+            for ( int i : values ) {
+                if (i > 0)
+                    count++;
+            }
+            return count;
         } else {
             return 0;
         }

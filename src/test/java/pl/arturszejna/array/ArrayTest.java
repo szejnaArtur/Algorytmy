@@ -44,9 +44,25 @@ public class ArrayTest {
     }
 
     @Test
+    public void countNegativeArrayElementsTest(){
+        int expected = 8;
+        int actual = array.countNegativeArrayElements();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void sumPositiveArrayElementsTest(){
         int expected = 226876;
         int actual = array.sumPositiveArrayElements();
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void countPositiveArrayElementsTest(){
+        int expected = 92;
+        int actual = array.countPositiveArrayElements();
 
         Assert.assertEquals(expected, actual);
     }
