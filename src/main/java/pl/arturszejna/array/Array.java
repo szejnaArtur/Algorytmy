@@ -4,6 +4,7 @@ class Array {
 
     private static int[] values;
 
+
     Array(int[] array) {
         values = array;
     }
@@ -13,6 +14,32 @@ class Array {
             int sum = 0;
             for ( int i : values )
                 sum += i;
+            return sum;
+        } else {
+            return 0;
+        }
+    }
+
+    int sumNegativeArrayElements() {
+        if (values != null) {
+            int sum = 0;
+            for ( int i : values ) {
+                if (i < 0)
+                    sum += i;
+            }
+            return sum;
+        } else {
+            return 0;
+        }
+    }
+
+    int sumPositiveArrayElements() {
+        if (values != null) {
+            int sum = 0;
+            for ( int i : values ) {
+                if (i > 0)
+                    sum += i;
+            }
             return sum;
         } else {
             return 0;
