@@ -8,6 +8,17 @@ class Array {
         values = array;
     }
 
+    int sumArrayElement() {
+        if (values != null) {
+            int sum = 0;
+            for ( int i : values )
+                sum += i;
+            return sum;
+        } else {
+            return 0;
+        }
+    }
+
     int findMin(int left, int right) {
         int minimumValue;
 
@@ -18,9 +29,9 @@ class Array {
                 minimumValue = Math.min(values[left], values[right]);
             } else {
                 int middle = (left + right) / 2;
-                int temporaryMinimum = findMin(left,middle);
-                minimumValue = findMin(middle+1,right);
-                if(minimumValue>temporaryMinimum){
+                int temporaryMinimum = findMin(left, middle);
+                minimumValue = findMin(middle + 1, right);
+                if (minimumValue > temporaryMinimum) {
                     minimumValue = temporaryMinimum;
                 }
             }
@@ -38,9 +49,9 @@ class Array {
                 maxValue = Math.max(values[left], values[right]);
             } else {
                 int middle = (left + right) / 2;
-                int temporaryMinimum = findMax(left,middle);
-                maxValue = findMax(middle+1,right);
-                if(maxValue<temporaryMinimum){
+                int temporaryMinimum = findMax(left, middle);
+                maxValue = findMax(middle + 1, right);
+                if (maxValue < temporaryMinimum) {
                     maxValue = temporaryMinimum;
                 }
             }

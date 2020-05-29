@@ -1,8 +1,6 @@
 package pl.arturszejna.array;
 
 import junit.framework.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import pl.arturszejna.converter.Converter;
 
@@ -19,6 +17,14 @@ public class ArrayTest {
     private int[] numbersArray = Converter.generatedIntegerArray(numbers, 100);
     private Array array = new Array(numbersArray);
 
+
+    @Test
+    public void sumArrayElementsTest(){
+        int expected = 249772;
+        int actual = array.sumArrayElement();
+
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void findMinTest() {
