@@ -8,4 +8,6 @@ class Math {
             return countFactorial(factorialNumber - 1) * factorialNumber;
         }
     }
+
+
 }

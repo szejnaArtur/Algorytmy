@@ -2,11 +2,29 @@ package pl.arturszejna.array;
 
 class Array {
 
-    private static int[] values;
+    private int[] values;
 
 
     Array(int[] array) {
         values = array;
+    }
+
+    public int[] getValues() {
+        return values;
+    }
+
+    public void setValues(int[] values) {
+        this.values = values;
+    }
+
+    int countNumberOfArrayElement(int value){
+        if(values!=null){
+            int sum = 0;
+            for(int i:values){
+                if(i == value) sum++;
+            }
+            return sum;
+        } else return 0;
     }
 
     int sumArrayElement() {

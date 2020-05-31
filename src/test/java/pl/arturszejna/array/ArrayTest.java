@@ -17,6 +17,16 @@ public class ArrayTest {
     private int[] numbersArray = Converter.generatedIntegerArray(numbers, 100);
     private Array array = new Array(numbersArray);
 
+    private Array shortArray = new Array(new int[]{10, 5, 4, 8, 6, 5, 4, 7, 8, 6, 5, 4, 10, 4, 10, 5, 1, 4, 4, 4, 2});
+
+
+    @Test
+    public void countNumberOfArrayElementTest(){
+        int expected = 7;
+        int actual = shortArray.countNumberOfArrayElement(4);
+
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void sumArrayElementsTest(){
