@@ -19,7 +19,6 @@ public class ArrayTest {
 
     private Array shortArray = new Array(new int[]{10, 5, 4, 8, 6, 5, 4, 7, 8, 6, 5, 4, 10, 4, 10, 5, 1, 4, 4, 4, 2});
 
-
     @Test
     public void countNumberOfArrayElementTest(){
         int expected = 7;
