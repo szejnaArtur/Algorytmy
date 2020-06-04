@@ -1,10 +1,8 @@
 package pl.arturszejna.algorithms.mathematic;
 
-public class SitoEratostenesa {
+import java.util.Arrays;
 
-    public static void main(String[] args) {
-        SitoEratostenesa sitoEratostenesa = new SitoEratostenesa(1,30);
-    }
+public class SitoEratostenesa {
 
     private int[] tab;
     private int sqrt;
@@ -16,20 +14,24 @@ public class SitoEratostenesa {
         for ( int i = 0; i < tab.length; i++ ) {
             tab[i] = a + i;
         }
+        sifted();
         print();
     }
 
 
     private void sifted() {
         int index = 0;
-        while (tab[index] <= sqrt) {
-            do {
-                index++;
-            } while (tab[index] == 0);
 
+        if (tab[index] == 1) index++;
+
+        while (tab[index] <= sqrt) {
             for ( int i = index + 1; i < tab.length; i++ ) {
                 if (tab[i] % tab[index] == 0) tab[i] = 0;
             }
+
+            do {
+                index++;
+            } while (tab[index] == 0);
         }
     }
 
