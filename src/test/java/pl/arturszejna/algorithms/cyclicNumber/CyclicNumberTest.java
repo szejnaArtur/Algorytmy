@@ -6,13 +6,23 @@ import org.junit.Test;
 public class CyclicNumberTest {
 
     @Test
-    public void isCyclicIsTrueTest() {
-        Assert.assertTrue(CyclicNumber.isCyclic("142857"));
+    public void givenNumberWhoIsCyclicWhenCheckedThenIsTrue() {
+        //Given
+        String number = "142857";
+        //When
+        Boolean isCyclic = CyclicNumber.isCyclic(number);
+        //Then
+        Assert.assertTrue(isCyclic);
     }
 
     @Test
-    public void isCyclicIsFalseTest() {
-        Assert.assertFalse(CyclicNumber.isCyclic("012233"));
+    public void givenNumberWhoIsNotCyclicWhenCheckedThenIsFalse() {
+        //Given
+        String number = "012233";
+        //When
+        Boolean isCyclic = CyclicNumber.isCyclic(number);
+        //Then
+        Assert.assertFalse(isCyclic);
     }
 
 }

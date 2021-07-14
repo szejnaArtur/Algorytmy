@@ -6,32 +6,32 @@ import org.junit.Test;
 public class FindMissingNumberTest {
 
     @Test
-    public void nativeFindMissingTest() {
+    public void givenArrayWhenFindMissingNumberThenNumberIsCorrect_native() {
         //Given
         int[] array = {0, 2, 1, 4, 3, 5, 6, 7, 8, 9, 11};
-        //Then
+        //When
         int missingNumber = FindMissingNumber.nativeFindMissing(array);
-        //When
+        //Then
         Assert.assertEquals(10, missingNumber);
     }
 
     @Test
-    public void memoryGreedyFindMissingTest() {
+    public void givenArrayWhenFindMissingNumberThenNumberIsCorrect_memoryGreedy() {
         //Given
         int[] array = {0, 2, 1, 4, 3, 5, 6, 7, 8, 9, 11};
-        //Then
+        //When
         int missingNumber = FindMissingNumber.memoryGreedyFindMissing(array);
-        //When
+        //Then
         Assert.assertEquals(10, missingNumber);
     }
 
     @Test
-    public void optimalFindMissingTest() {
+    public void givenArrayWhenFindMissingNumberThenNumberIsCorrect_optimal() {
         //Given
         int[] array = {0, 2, 1, 4, 3, 5, 6, 7, 8, 9, 11};
-        //Then
-        int missingNumber = FindMissingNumber.optimalFindMissing(array);
         //When
+        int missingNumber = FindMissingNumber.optimalFindMissing(array);
+        //Then
         Assert.assertEquals(10, missingNumber);
     }
 

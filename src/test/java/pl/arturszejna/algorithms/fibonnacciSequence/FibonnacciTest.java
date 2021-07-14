@@ -6,12 +6,6 @@ import org.junit.Test;
 
 public class FibonnacciTest {
 
-    @Ignore
-    @Test
-    public void example() {
-
-    }
-
     @Test
     public void givenTheTenthNumberOfFibonacciSequence() {
         int fib = Fibonnacci.displayRecursively(10);
