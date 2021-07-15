@@ -27,14 +27,6 @@ public class SumOfNumbersInRangeTest {
         Assertions.assertEquals(55.0, sum);
     }
 
-
-
-
-
-
-
-
-
     @Test
     public void givenRangeOfNumbersWhenStartNumberIsPositiveThenSumIsCorrect() {
         //Given

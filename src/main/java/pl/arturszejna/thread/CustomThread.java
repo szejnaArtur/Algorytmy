@@ -4,6 +4,8 @@ public class CustomThread extends Thread{
 
     @Override
     public void run() {
-        System.out.println("Code created in external CustomThread class extending Thread class.");
+        for (int i = 1; i <= 10000; i++) {
+            System.out.println("CustomThread loop: " + i);
+        }
     }
 }
