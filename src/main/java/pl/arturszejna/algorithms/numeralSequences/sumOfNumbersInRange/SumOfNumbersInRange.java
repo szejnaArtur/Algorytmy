@@ -1,4 +1,4 @@
-package pl.arturszejna.algorithms.sumOfNumbersInRange;
+package pl.arturszejna.algorithms.numeralSequences.sumOfNumbersInRange;
 
 //Oblicz sumę liczb całkowitych z przedziału <x, y>
 

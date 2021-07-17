@@ -1,4 +1,4 @@
-package pl.arturszejna.algorithms.sumOfNumbersInRange;
+package pl.arturszejna.algorithms.numeralSequences.sumOfNumbersInRange;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
