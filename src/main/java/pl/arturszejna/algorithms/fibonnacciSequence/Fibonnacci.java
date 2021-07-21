@@ -16,13 +16,13 @@ class Fibonnacci {
 
     static int displayNonRecursively(int n) {
         if (n < 1) throw new IllegalArgumentException("numbers below 1 not allowed");
-        if (n<=2) return 1;
+        if (n <= 2) return 1;
 
         int first = 1;
         int second = 1;
         int nth = 2;
 
-        for(int i = 3; i<=n; i++){
+        for (int i = 3; i <= n; i++) {
             nth = first + second;
             first = second;
             second = nth;
