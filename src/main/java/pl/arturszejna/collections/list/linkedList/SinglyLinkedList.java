@@ -1,22 +1,22 @@
 package pl.arturszejna.collections.list.linkedList;
 
-public class SinglyLinkedList {
+public class SinglyLinkedList<E> {
 
-    static class Node{
-        int data;
-        Node next;
+    public Node<E> head = null;
+    public Node<E> tail = null;
 
-        public Node(int data){
+    static class Node<E>{
+        E data;
+        Node<E> next;
+
+        public Node(E data){
             this.data = data;
             this.next = null;
         }
     }
 
-    public Node head = null;
-    public Node tail = null;
-
-    public void add(int data){
-        Node newNode = new Node(data);
+    public void add(E data){
+        Node<E> newNode = new Node<>(data);
 
         if (head == null){
             head = newNode;
@@ -27,7 +27,7 @@ public class SinglyLinkedList {
     }
 
     public void display(){
-        Node current = head;
+        Node<E> current = head;
         while (head!=null){
             System.out.print(current.data + " ");
             current = current.next;
