@@ -3,7 +3,7 @@ package pl.arturszejna.collections.list.doubleLinkedList;
 public class Main {
     public static void main(String[] args) {
 
-        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        LinkedList<Integer> list = new LinkedList<>();
 
         list.add(11);
         list.add(22);
@@ -23,6 +23,9 @@ public class Main {
         System.out.println("Get[2]: " + list.get(2));
         System.out.println("Size: " + list.size());
 
-
+        list.deleteFirst();
+        list.deleteLast();
+        System.out.println("IsEmpty: " + list.isEmpty());
+        list.iterateBackward();
     }
 }

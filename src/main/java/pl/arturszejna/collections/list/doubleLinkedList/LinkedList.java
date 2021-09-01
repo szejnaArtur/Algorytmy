@@ -2,8 +2,7 @@ package pl.arturszejna.collections.list.doubleLinkedList;
 
 import java.util.NoSuchElementException;
 
-public class DoubleLinkedList<E> {
-
+public class LinkedList<E> {
     private int size = 0;
     private Node<E> head = null;
     private Node<E> tail = null;
@@ -93,7 +92,6 @@ public class DoubleLinkedList<E> {
             tail = newNode;
         }
         tail.next = null;
-
         size++;
     }
 

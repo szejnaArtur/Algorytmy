@@ -3,25 +3,23 @@ package pl.arturszejna.algorithms.binarySearch;
 public class BinarySearch {
 
     //złożoność obliczeniowa O(log n)
-    public static int search(int[] sortedList, int item) {
+    //złożoność pamięciowa O(1)
+    public static int bianrySearch(int[] array, int key) {
         int low = 0;
-        int high = sortedList.length - 1;
+        int high = array.length - 1;
 
         while (low <= high) {
-            int mid = (low + high)/2;
-            System.out.println(mid);
-            int guess = sortedList[mid];
-            if (guess == item) {
-                return mid;
-            } else {
-                if (guess > item) {
-                    high = mid - 1;
-                } else {
-                    low = mid + 1;
-                }
-            }
+            int mid = (low + high) >>> 1;
+            int midVal = array[mid];
+
+            if (midVal < key)
+                low = mid + 1;
+            else if (midVal > key)
+                high = mid - 1;
+            else
+                return mid; // key found
         }
-        return -1;
+        return -(low + 1);  // key not found.
     }
 
 }

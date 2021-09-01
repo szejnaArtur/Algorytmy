@@ -6,7 +6,6 @@ public class App {
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
-        System.out.println("Indeks: " + BinarySearch.search(array, -1));
-//        System.out.println("Indeks: " + BinarySearch.search(array, 4));
+        System.out.println("Indeks: " + BinarySearch.bianrySearch(array, 10));
     }
 }
